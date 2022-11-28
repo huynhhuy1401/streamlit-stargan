@@ -13,7 +13,7 @@ def denorm(x):
     return out.clamp_(0, 1)
 
 model = solver.Generator(64, 5, 6)
-model.load_state_dict(torch.load("/home/huyduong/stargan/200000-G.ckpt", map_location=lambda storage, loc: storage))
+model.load_state_dict(torch.load("200000-G.ckpt", map_location=lambda storage, loc: storage))
 
 transform = []
 transform.append(T.CenterCrop(178))
